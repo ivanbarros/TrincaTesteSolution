@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="EntityFrameworkCore.Data.QueryBuilder.Abstractions" Version="7.0.12" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.34" />
@@ -24,8 +27,17 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
   </ItemGroup>
 
+ 
+
   <ItemGroup>
-    <ProjectReference Include="..\TrincaTeste.Domain\TrincaTeste.Domain.csproj" />
+    <Folder Include="Handlers\Event\" />
+    <Folder Include="Handlers\User\" />
+  </ItemGroup>
+
+ 
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrincaTeste.Domain\Trinca.Domain.csproj" />
   </ItemGroup>
 
 </Project>

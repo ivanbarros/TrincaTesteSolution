@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Trinca.Domain.Interfaces.Repoisitories;
+using Trinca.Domain.Interfaces.Repoisitories.BaseRepository;
 using Trinca.Infra.Repositories;
 using Trinca.Infra.Repositories.Base;
-using TrincaTeste.Domain.Interfaces.Repoisitories;
-using TrincaTeste.Domain.Interfaces.Repoisitories.BaseRepository;
 
 namespace Trinca.Infra.Configuration.DependencyInjection
 {

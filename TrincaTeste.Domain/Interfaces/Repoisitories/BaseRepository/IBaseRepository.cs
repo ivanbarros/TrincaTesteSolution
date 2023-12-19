@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
-using TrincaTeste.Domain.Entities.Base;
+using Trinca.Domain.Entities.Base;
 
-namespace TrincaTeste.Domain.Interfaces.Repoisitories.BaseRepository
+namespace Trinca.Domain.Interfaces.Repoisitories.BaseRepository
 {
-    public interface IBaseRepository<TEntity> where TEntity : BaseEntity
+    public interface IBaseRepository<TEntity> where TEntity : class
     {
         DbSet<TEntity> GetDbSet();
         Task BulkInsert(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);

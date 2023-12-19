@@ -1,8 +1,10 @@
-using Trinca.Infra.Configuration.CosmosDb;
+using Trinca.Core.Configuration.CosmosDb;
+using Trinca.Core.Configuration.Jwt;
+using Trinca.Core.Configuration.MediatorConfig;
 using Trinca.Infra.Configuration.DependencyInjection;
 using Trinca.Infra.Configuration.Swagger;
 
-namespace TrincaTesteWeb
+namespace TrincaWeb
 {
     public class Program
     {
@@ -10,19 +12,19 @@ namespace TrincaTesteWeb
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddControllers();
-           
+            
+            builder.Services.AddControllers();           
             builder.Services.ConfigureDependenciesRepositories();
             builder.Services.ConfigureDependenciesService(builder.Configuration);
-            CosmosDbConfig.ConfigureCosmosDb(builder.Services,builder.Configuration);
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.ConfigureCosmosDb(builder.Configuration);
+            builder.Services.ConfigureMediator();
+            builder.Services.AddAutoMapper(typeof(Program));         
             builder.Services.AddSwaggerFramework(builder.Environment, builder.Configuration);
+            builder.Services.ConfigureToken(builder.Configuration);
 
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

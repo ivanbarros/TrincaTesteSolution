@@ -1,4 +1,4 @@
-﻿namespace TrincaTeste.Domain.Interfaces.Services.BaseService
+﻿namespace Trinca.Domain.Interfaces.Services.BaseService
 {
     public interface IBaseService<T> where T : class
     {

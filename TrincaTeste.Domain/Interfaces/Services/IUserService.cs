@@ -1,4 +1,4 @@
-﻿namespace TrincaTeste.Domain.Interfaces.Services
+﻿namespace Trinca.Domain.Interfaces.Services
 {
     public interface IUserService 
     {

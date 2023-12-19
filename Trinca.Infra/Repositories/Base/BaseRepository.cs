@@ -2,8 +2,8 @@
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 using Trinca.Infra.Data;
-using TrincaTeste.Domain.Entities.Base;
-using TrincaTeste.Domain.Interfaces.Repoisitories.BaseRepository;
+using Trinca.Domain.Entities.Base;
+using Trinca.Domain.Interfaces.Repoisitories.BaseRepository;
 
 namespace Trinca.Infra.Repositories.Base
 {

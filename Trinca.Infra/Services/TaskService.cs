@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using Trinca.Infra.Services.Base;
-using TrincaTeste.Domain.Entities;
-using TrincaTeste.Domain.Interfaces.Repoisitories.BaseRepository;
-using TrincaTeste.Domain.Interfaces.Services;
+using Trinca.Domain.Entities;
+using Trinca.Domain.Interfaces.Repoisitories.BaseRepository;
+using Trinca.Domain.Interfaces.Services;
 
 namespace Trinca.Infra.Services
 {

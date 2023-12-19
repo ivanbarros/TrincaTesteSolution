@@ -1,8 +1,8 @@
 ﻿using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Logging;
-using TrincaTeste.Domain.Entities.Base;
-using TrincaTeste.Domain.Interfaces.Repoisitories.BaseRepository;
-using TrincaTeste.Domain.Interfaces.Services.BaseService;
+using Trinca.Domain.Entities.Base;
+using Trinca.Domain.Interfaces.Repoisitories.BaseRepository;
+using Trinca.Domain.Interfaces.Services.BaseService;
 
 namespace Trinca.Infra.Services.Base
 {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Trinca.Domain.Interfaces.Services;
+using Trinca.Domain.Interfaces.Services.BaseService;
 using Trinca.Infra.Services;
 using Trinca.Infra.Services.Base;
-using TrincaTeste.Domain.Interfaces.Services;
-using TrincaTeste.Domain.Interfaces.Services.BaseService;
 
 namespace Trinca.Infra.Configuration.DependencyInjection
 {

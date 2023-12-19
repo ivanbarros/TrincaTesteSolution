@@ -8,17 +8,17 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["TrincaTesteWeb/TrincaTesteWeb.csproj", "TrincaTesteWeb/"]
-RUN dotnet restore "./TrincaTesteWeb/./TrincaTesteWeb.csproj"
+COPY ["TrincaWeb/TrincaWeb.csproj", "TrincaWeb/"]
+RUN dotnet restore "./TrincaWeb/./TrincaWeb.csproj"
 COPY . .
-WORKDIR "/src/TrincaTesteWeb"
-RUN dotnet build "./TrincaTesteWeb.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/TrincaWeb"
+RUN dotnet build "./TrincaWeb.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./TrincaTesteWeb.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./TrincaWeb.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TrincaTesteWeb.dll"]
+ENTRYPOINT ["dotnet", "TrincaWeb.dll"]

@@ -1,6 +1,6 @@
-﻿using TrincaTeste.Domain.Entities.Base;
+﻿using Trinca.Domain.Entities.Base;
 
-namespace TrincaTeste.Domain.Entities
+namespace Trinca.Domain.Entities
 {
     public class EventEntity : BaseEntity
     {

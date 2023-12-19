@@ -1,7 +1,7 @@
-﻿using TrincaTeste.Domain.Entities;
-using TrincaTeste.Domain.Interfaces.Services.BaseService;
+﻿using Trinca.Domain.Entities;
+using Trinca.Domain.Interfaces.Services.BaseService;
 
-namespace TrincaTeste.Domain.Interfaces.Services
+namespace Trinca.Domain.Interfaces.Services
 {
     public interface ITaskService :  IBaseService<TaskEntity>
     {
