@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E381F559-7A46-48B8-948C-04C11C2B97AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{4B1E5635-B77B-4D7F-938D-76A2776988A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C2ACC47C-B677-41A5-B4D7-5861379C6F1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{676B500E-5BB5-46F5-8299-C593E33F39BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrincaTesteWeb", "TrincaTesteWeb\TrincaTesteWeb.csproj", "{9F890830-C32F-43F8-A2D3-746E69B2E8C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrincaTeste.Domain", "TrincaTeste.Domain\TrincaTeste.Domain.csproj", "{F87BC1B8-5277-4220-8CA3-B2B0399BF666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trinca.Infra", "Trinca.Infra\Trinca.Infra.csproj", "{00B8F215-5DEA-4952-B794-3B60EBDBC496}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F890830-C32F-43F8-A2D3-746E69B2E8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F890830-C32F-43F8-A2D3-746E69B2E8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F890830-C32F-43F8-A2D3-746E69B2E8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F890830-C32F-43F8-A2D3-746E69B2E8C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87BC1B8-5277-4220-8CA3-B2B0399BF666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87BC1B8-5277-4220-8CA3-B2B0399BF666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87BC1B8-5277-4220-8CA3-B2B0399BF666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87BC1B8-5277-4220-8CA3-B2B0399BF666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B8F215-5DEA-4952-B794-3B60EBDBC496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B8F215-5DEA-4952-B794-3B60EBDBC496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B8F215-5DEA-4952-B794-3B60EBDBC496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B8F215-5DEA-4952-B794-3B60EBDBC496}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F890830-C32F-43F8-A2D3-746E69B2E8C2} = {C2ACC47C-B677-41A5-B4D7-5861379C6F1C}
+		{F87BC1B8-5277-4220-8CA3-B2B0399BF666} = {E381F559-7A46-48B8-948C-04C11C2B97AC}
+		{00B8F215-5DEA-4952-B794-3B60EBDBC496} = {4B1E5635-B77B-4D7F-938D-76A2776988A8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {262A7927-B5E8-47D2-B999-5747C8EF4049}
+	EndGlobalSection
+EndGlobal
