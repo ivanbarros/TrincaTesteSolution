@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Trinca.Domain.Entities;
 using Trinca.Infra.Commands.Tasks;
+using Trinca.Infra.Commands.Users;
 
 namespace Trinca.Core.Configuration.Automapper
 {
@@ -10,6 +11,7 @@ namespace Trinca.Core.Configuration.Automapper
         {
             CreateMap<InsertTaskCommand, InsertTaskCommandResponse>().ReverseMap();
             CreateMap<TaskEntity, InsertTaskCommand>().ReverseMap();
+            CreateMap<UserEntity, InsertUserCommand>().ReverseMap();
         }
     }
 }
