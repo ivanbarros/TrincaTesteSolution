@@ -3,42 +3,41 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Trinca.Domain.Interfaces.Services;
-using Trinca.Infra.Commands.Tasks;
-using Trinca.Infra.Queries.Task;
+using Trinca.Infra.Commands.Users;
 
-namespace TrincaWeb.Controllers
+namespace TrincaTesteWeb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
-    public class TaskController : ControllerBase
+    public class UserController : ControllerBase
     {
-
         [HttpGet]
-        [Route("tarefas")]
+        [Route("usuarios")]
+        [Authorize]
         [SwaggerOperation(
-            Summary = "Seleciona todas as tarefas"
+            Summary = "Seleciona todos os usuarios"
         )]
         [SwaggerResponse(StatusCodes.Status200OK)]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status500InternalServerError)]
         [ApiExplorerSettings(IgnoreApi = false)]
-        public async Task<IActionResult> Get([FromServices] IMediator mediator)
+        public async Task<IActionResult> Get([FromServices] IUserService service)
         {
-            var result = await mediator.Send(new GetTaskAllQuery());
+            var result = await service.GetAll();
             return Ok();
         }
 
         [HttpPost]
-        [Route("tarefas")]
+        [Route("usuarios")]
+        [AllowAnonymous]
         [SwaggerOperation(
-            Summary = "Inserção das tarefas"
+            Summary = "Cadastro de novo usuário"
         )]
         [SwaggerResponse(StatusCodes.Status201Created)]
         [SwaggerResponse(StatusCodes.Status400BadRequest)]
         [SwaggerResponse(StatusCodes.Status500InternalServerError)]
         [ApiExplorerSettings(IgnoreApi = false)]
-        public async Task<IActionResult> Post([FromServices] IMediator mediator, [FromBody] InsertTaskCommand command)
+        public async Task<IActionResult> Post([FromServices] IMediator mediator, [FromBody] InsertUserCommand command)
         {
             try
             {

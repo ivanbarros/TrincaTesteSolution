@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{4B1E5635
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C2ACC47C-B677-41A5-B4D7-5861379C6F1C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{676B500E-5BB5-46F5-8299-C593E33F39BC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrincaTesteWeb", "TrincaTesteWeb\TrincaTesteWeb.csproj", "{9F890830-C32F-43F8-A2D3-746E69B2E8C2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trinca.Domain", "TrincaTeste.Domain\Trinca.Domain.csproj", "{F87BC1B8-5277-4220-8CA3-B2B0399BF666}"
@@ -19,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trinca.Infra", "Trinca.Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{258DB491-5438-42ED-A2F9-B8D07D4C9FE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trinca.Core", "TricaTeste.Core\Trinca.Core.csproj", "{12EE2DCF-215F-40E6-9312-E295625A4898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trinca.Core", "TricaTeste.Core\Trinca.Core.csproj", "{12EE2DCF-215F-40E6-9312-E295625A4898}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

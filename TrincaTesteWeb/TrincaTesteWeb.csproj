@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TricaTeste.Core\Trinca.Core.csproj" />
+    <ProjectReference Include="..\Trinca.Infra\Trinca.Infra.csproj" />
   </ItemGroup>
 
  

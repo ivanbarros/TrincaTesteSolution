@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 
-namespace Trinca.Core.Configuration.Jwt
+namespace Trinca.Infra.Data.Jwt
 {
     public class SigningConfigurations
     {

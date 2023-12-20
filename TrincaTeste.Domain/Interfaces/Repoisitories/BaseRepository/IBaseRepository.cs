@@ -37,6 +37,7 @@ namespace Trinca.Domain.Interfaces.Repoisitories.BaseRepository
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
             CancellationToken cancellationToken = default);
+        Task<TEntity> FindByLogin(string email, string password);
 
         Task<bool> ExistsAsync(Expression<Func<TEntity, bool>>? where = null, CancellationToken cancellationToken = default);
 

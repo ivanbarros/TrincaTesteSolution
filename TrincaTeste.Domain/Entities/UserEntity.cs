@@ -6,7 +6,7 @@ namespace Trinca.Domain.Entities
     {
         public DateTime DtBirth { get; set; }
         public string Document { get; set; }
-        public string Login { get; set; }
+        public string Email { get; set; }
         public string Pwd { get; set; }
     }
 }

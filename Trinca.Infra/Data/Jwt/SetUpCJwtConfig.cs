@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Trinca.Core.Configuration.Jwt
+namespace Trinca.Infra.Data.Jwt
 {
-    public static class TokenConfiguration
+    public static class SetUpCJwtConfig
     {
         public static void ConfigureToken(this IServiceCollection services, IConfiguration Configuration)
         {

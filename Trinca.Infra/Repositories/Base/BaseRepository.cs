@@ -4,6 +4,9 @@ using System.Linq.Expressions;
 using Trinca.Infra.Data;
 using Trinca.Domain.Entities.Base;
 using Trinca.Domain.Interfaces.Repoisitories.BaseRepository;
+using Trinca.Domain.Entities;
+using System.Data;
+using System.Collections.Generic;
 
 namespace Trinca.Infra.Repositories.Base
 {
@@ -122,6 +125,12 @@ namespace Trinca.Infra.Repositories.Base
             return dbSet.AnyAsync(cancellationToken);
         }
 
+        public async Task<TEntity> FindByLogin(string email, string password)
+        {
+            var dbSet = DBSet.AsQueryable();
+            return await dbSet.FirstOrDefaultAsync();
+        }
+
         public virtual async Task<TEntity> Insert(TEntity entity, CancellationToken cancellationToken = default)
         {
             entity.CreatedAt = DateTime.Now;
@@ -223,6 +232,8 @@ namespace Trinca.Infra.Repositories.Base
         }
 
         private IQueryable<TEntity> AllNotRemoved() => DBSet.Where(x => x.DeletedAt == null);
+
+       
     }
 }
 

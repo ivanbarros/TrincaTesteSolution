@@ -1,4 +1,4 @@
-﻿namespace Trinca.Core.Configuration.Jwt
+﻿namespace Trinca.Infra.Data.Jwt
 {
     public class TokenConfigurations
     {
