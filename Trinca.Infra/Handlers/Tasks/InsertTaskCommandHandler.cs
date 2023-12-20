@@ -5,7 +5,6 @@ using Microsoft.Extensions.Logging;
 using Trinca.Domain.Entities;
 using Trinca.Domain.Interfaces.Services;
 using Trinca.Domain.Notifications;
-using Trinca.Domain.Notifications.Task;
 using Trinca.Infra.Commands.Tasks;
 
 namespace Trinca.Infra.Handlers.Tasks
@@ -31,13 +30,7 @@ namespace Trinca.Infra.Handlers.Tasks
                 var entity = _mapper.Map<TaskEntity>(request);
                 
                 var result = await _taskService.Insert(entity);
-                await _mediator.Publish(new TaskNotification
-                {
-                    Name = request.Name,
-                    Start = request.Start,
-                    End = request.End,
-                    IdUser = request.IdUser
-                });
+                
                 var response = _mapper.Map<InsertTaskCommandResponse>(request);
                 return response;
             }

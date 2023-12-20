@@ -14,6 +14,7 @@ namespace Trinca.Infra.Configuration.DependencyInjection
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<IUserService, UserSrvice>();
+            services.AddScoped<ILoginService, LoginService>();
         }
     }
 }
