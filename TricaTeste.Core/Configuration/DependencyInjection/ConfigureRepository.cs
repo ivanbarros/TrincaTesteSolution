@@ -14,6 +14,7 @@ namespace Trinca.Infra.Configuration.DependencyInjection
 
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }
