@@ -8,5 +8,6 @@ namespace Trinca.Infra.Commands.Users
 {
     public class InsertUserCommandResponse
     {
+        public object Token { get; set; }
     }
 }

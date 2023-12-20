@@ -43,6 +43,7 @@ namespace Trinca.Infra.Handlers.Tasks
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex.Message);
                 await _mediator.Publish(new ErroNotification { Excecao = ex.Message, PilhaErro = ex.StackTrace });
                 throw;
             }
