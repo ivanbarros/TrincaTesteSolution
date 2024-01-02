@@ -11,12 +11,12 @@ namespace Trinca.Domain.Entities.Base
         public string Name { get; set; }
         
         [JsonPropertyName("createAt")]
-        public DateTime CreatedAt { get; set; }= DateTime.Now;
+        public DateTime CreatedAt { get; set; }
         
         [JsonPropertyName("updateAt")]
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; }
         
         [JsonPropertyName("deleteAt")]
-        public DateTime DeletedAt { get; set; } = DateTime.Now;
+        public DateTime DeletedAt { get; set; }
     }
 }

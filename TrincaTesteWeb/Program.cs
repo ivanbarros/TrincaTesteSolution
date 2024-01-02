@@ -1,3 +1,4 @@
+using Trinca.Core.Configuration.Automapper;
 using Trinca.Core.Configuration.CosmosDb;
 using Trinca.Core.Configuration.MediatorConfig;
 using Trinca.Infra.Configuration.DependencyInjection;
@@ -18,7 +19,7 @@ namespace TrincaWeb
             builder.Services.ConfigureDependenciesService(builder.Configuration);
             builder.Services.ConfigureCosmosDb(builder.Configuration);
             builder.Services.ConfigureMediator();
-            builder.Services.AddAutoMapper(typeof(Program));         
+            builder.Services.ConfigureAutomapper();         
             builder.Services.AddSwaggerFramework(builder.Environment, builder.Configuration);
             SetUpCJwtConfig.ConfigureToken(builder.Services,builder.Configuration);
 

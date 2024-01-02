@@ -32,7 +32,7 @@ namespace Trinca.Infra.Handlers.User
             try
             {
                 var entity = _mapper.Map<UserEntity>(request);
-                var result = _service.Insert(entity);
+                var result = await _service.Insert(entity);
                 var dto = new LoginDto { Email = request.Email,Password = request.Pwd };
                 var token = await _loginService.FindByLogin(dto);
                 var response = new InsertUserCommandResponse();

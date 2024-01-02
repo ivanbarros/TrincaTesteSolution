@@ -131,7 +131,7 @@ namespace Trinca.Infra.Repositories.Base
             return await dbSet.FirstOrDefaultAsync();
         }
 
-        public virtual async Task<TEntity> Insert(TEntity entity, CancellationToken cancellationToken = default)
+        public  async Task<TEntity> Insert(TEntity entity, CancellationToken cancellationToken = default)
         {
             entity.CreatedAt = DateTime.Now;
 
